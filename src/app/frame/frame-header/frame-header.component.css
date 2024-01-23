@@ -1,0 +1,10 @@
+.frame-header {
+    /* z-index: 1; */
+    /* top: 1;
+    position: fixed; */
+    width: 100%;
+    padding: 1%;
+    display: block;
+    background-color: gray;
+    margin: .1%;
+}
