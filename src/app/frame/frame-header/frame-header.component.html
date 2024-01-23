@@ -1,10 +1,5 @@
 <div class="frame-header">
-    <div class="grid-spaceAround">
-        <div class="col-center">
-            <p-button (onClick)="onMyTurnPush()" label="My Turn"></p-button>
-        </div>
-        <div class="col-center">
-            <p-button (onClick)="onOpponentTurnPush()" label="Opponent's Turn" severity="danger"></p-button>
-        </div>
+    <div class="justify-content-center">
+        <p-selectButton [options]="turnOptions" [(ngModel)]="turnValue" optionLabel="label" optionValue="value" (onOptionClick)="onTurnChange()"></p-selectButton>
     </div>
 </div>

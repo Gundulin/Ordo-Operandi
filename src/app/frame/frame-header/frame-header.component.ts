@@ -1,25 +1,25 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 @Component({
   selector: 'app-frame-header',
   standalone: true,
-  imports: [ButtonModule],
+  imports: [ButtonModule, SelectButtonModule, FormsModule],
   templateUrl: './frame-header.component.html',
   styleUrl: './frame-header.component.css'
 })
 export class FrameHeaderComponent {
-  @Output()
-  myTurn: EventEmitter<any> = new EventEmitter();
 
   @Output()
-  opponentTurn: EventEmitter<any> = new EventEmitter();
+  turn: EventEmitter<string> = new EventEmitter();
 
-  onMyTurnPush() {
-    this.myTurn.emit();
-  }
+  turnValue: string = 'myTurn';
+  turnOptions: any = [{label: 'My Turn', value: 'myTurn'}, {label: 'Opponent\'s Turn', value: 'oppTurn'}];
 
-  onOpponentTurnPush() {
-    this.opponentTurn.emit();
+  onTurnChange() {
+    this.turn.emit(this.turnValue);
+    console.log('turnValue: ' + this.turnValue);
   }
 }
