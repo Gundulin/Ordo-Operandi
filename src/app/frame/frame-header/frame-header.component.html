@@ -1,1 +1,10 @@
-<p>frame-header works!</p>
+<div class="frame-header">
+    <div class="grid-spaceAround">
+        <div class="col-center">
+            <p-button (onClick)="onMyTurnPush()" label="My Turn"></p-button>
+        </div>
+        <div class="col-center">
+            <p-button (onClick)="onOpponentTurnPush()" label="Opponent's Turn" severity="danger"></p-button>
+        </div>
+    </div>
+</div>

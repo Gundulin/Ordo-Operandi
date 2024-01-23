@@ -1,0 +1,7 @@
+.frame-header {
+    /* z-index: 1; */
+    position: fixed;
+    width: 99%;
+    padding: 1%;
+    border: 1px solid black;
+}

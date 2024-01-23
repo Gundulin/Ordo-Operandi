@@ -1,9 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-frame-header',
   standalone: true,
-  imports: [],
+  imports: [ButtonModule],
   templateUrl: './frame-header.component.html',
   styleUrl: './frame-header.component.css'
 })
