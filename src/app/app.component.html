@@ -1,4 +1,5 @@
 <div class="page">
     <h4 class="ordo-title">Ordo Operandi</h4>
-    <app-frame-base></app-frame-base>
+    <app-gate *ngIf="gateIsShut" (press)="openGate()"></app-gate>
+    <app-frame-base *ngIf="!gateIsShut"></app-frame-base>
 </div>
